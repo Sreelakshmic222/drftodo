@@ -1,0 +1,15 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="home-container">
+    <h2>Welcome to the Task Manager</h2>
+    <p>Your personal task management system. You can create, view, update, and delete tasks.</p>
+
+    <div class="task-links">
+        <a href="{% url 'tasks-list' %}" class="btn">View Tasks</a>
+        <a href="{% url 'task-create' %}" class="btn">Create a Task</a>
+        <a href="{% url 'home' %}" class="btn">Task Overview</a>
+    </div>
+</div>
+{% endblock %}

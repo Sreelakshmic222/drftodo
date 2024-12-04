@@ -1,0 +1,11 @@
+<!-- templates/task_list.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>All Tasks</h2>
+<ul>
+    {% for task in tasks %}
+        <li>{{ task.title }} - <a href="{% url 'task-view' task.id %}">View</a> | <a href="{% url 'task-update' task.id %}">Update</a> | <a href="{% url 'task-delete' task.id %}">Delete</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
